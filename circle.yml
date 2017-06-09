@@ -1,0 +1,30 @@
+version: 2
+
+jobs:
+  build:
+    working_directory: ~/abacus_tpot
+    docker:
+      - image: circleci/python:3.6.0
+
+    steps:
+      - checkout
+      - restore_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}
+      - run:
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+      - save_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}
+          paths:
+            - "venv"
+      - run:
+          name: Running tests
+          command: |
+            echo Running tests
+            . venv/bin/activate
+            python setup.py test
+      - store_artifacts:
+          path: test-reports/
+          destination: abacus

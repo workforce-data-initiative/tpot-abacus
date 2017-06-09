@@ -4,7 +4,7 @@ jobs:
   build:
     working_directory: ~/abacus_tpot
     docker:
-      - image: circleci/python:3.6.0
+      - image: circleci/python:3.6.1
 
     steps:
       - checkout

@@ -1,6 +1,11 @@
 # abacus-tpot
 Analysis Library
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python 3](https://pyup.io/repos/github/workforce-data-initiative/abacus-tpot/python-3-shield.svg)](https://pyup.io/repos/github/workforce-data-initiative/abacus-tpot/)
+[![Updates](https://pyup.io/repos/github/workforce-data-initiative/abacus-tpot/shield.svg)](https://pyup.io/repos/github/workforce-data-initiative/abacus-tpot/)
+[![CircleCI](https://circleci.com/gh/workforce-data-initiative/abacus-tpot.svg?style=svg)](https://circleci.com/gh/workforce-data-initiative/abacus-tpot)
+
 ### Installation
 
 Create a Python virtual environment then run:

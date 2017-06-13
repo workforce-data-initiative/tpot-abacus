@@ -14,6 +14,12 @@ Create a Python virtual environment then run:
 pip install https://github.com/workforce-data-initiative/abacus-tpot/archive/master.zip
 ```
 
+Development
+
+This project has a `.editorconfig` file to help contributors define and maintain consistent coding styles between different editors and IDEs.
+
+We are using CircleCI version 2, for more on this read this: https://circleci.com/beta-access/
+
 ### Testing
 
 Run:

@@ -11,10 +11,10 @@ Analysis Library
 Create a Python virtual environment then run:
 
 ```bash
-pip install https://github.com/workforce-data-initiative/abacus-tpot/archive/master.zip
+pip install abacus-tpot
 ```
 
-Development
+### Development
 
 This project has a `.editorconfig` file to help contributors define and maintain consistent coding styles between different editors and IDEs.
 

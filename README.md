@@ -5,6 +5,7 @@ Analysis Library
 [![Python 3](https://pyup.io/repos/github/workforce-data-initiative/abacus-tpot/python-3-shield.svg)](https://pyup.io/repos/github/workforce-data-initiative/abacus-tpot/)
 [![Updates](https://pyup.io/repos/github/workforce-data-initiative/abacus-tpot/shield.svg)](https://pyup.io/repos/github/workforce-data-initiative/abacus-tpot/)
 [![CircleCI](https://circleci.com/gh/workforce-data-initiative/abacus-tpot.svg?style=svg)](https://circleci.com/gh/workforce-data-initiative/abacus-tpot)
+[![Coverage Status](https://coveralls.io/repos/github/workforce-data-initiative/abacus-tpot/badge.svg)](https://coveralls.io/github/workforce-data-initiative/abacus-tpot)
 
 ### Installation
 

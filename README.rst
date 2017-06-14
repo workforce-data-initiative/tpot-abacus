@@ -3,7 +3,7 @@ abacus-tpot
 
 Analysis Library
 
-|License| |Python 3| |Updates| |CircleCI|
+|License| |Python 3| |Updates| |CircleCI| |Coverage Status|
 
 Installation
 ~~~~~~~~~~~~
@@ -41,3 +41,5 @@ Run:
    :target: https://pyup.io/repos/github/workforce-data-initiative/abacus-tpot/
 .. |CircleCI| image:: https://circleci.com/gh/workforce-data-initiative/abacus-tpot.svg?style=svg
    :target: https://circleci.com/gh/workforce-data-initiative/abacus-tpot
+.. |Coverage Status| image:: https://coveralls.io/repos/github/workforce-data-initiative/abacus-tpot/badge.svg
+   :target: https://coveralls.io/github/workforce-data-initiative/abacus-tpot

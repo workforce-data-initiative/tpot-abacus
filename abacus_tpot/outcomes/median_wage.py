@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import tpot_config
+from abacus_tpot import tpot_config
 
 def median_wage(wage_table, participants, reporting_period_start, reporting_period_end):
     """

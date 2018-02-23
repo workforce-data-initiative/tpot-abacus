@@ -2,8 +2,8 @@ from unittest import TestCase
 import pandas as pd
 import numpy as np
 
-from outcomes.median_wage import median_wage, median_wage_after_exit_date
-from input_db.participants import filter_participants
+from abacus_tpot.outcomes.median_wage import median_wage, median_wage_after_exit_date
+from abacus_tpot.input_db.participants import filter_participants
 
 
 class TestParticipantList(TestCase):

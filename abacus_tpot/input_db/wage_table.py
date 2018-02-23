@@ -2,7 +2,7 @@
 import psycopg2
 import pandas as pd
 import numpy as np
-import tpot_config
+from abacus_tpot import tpot_config
 
 def get_wage_table():
     """

@@ -10,36 +10,36 @@ def get_participant_table():
     """
     conn = psycopg2.connect(tpot_config.WAREHOUSE_URI)
     df = pd.read_sql('''
-        SELECT ParticipantID, ProgramID, ExitTypeID, EntryDate, ExitDate, Enrolled
-            FROM ParticipantProgram p
+        SELECT participant_id, program_code, provider_id, exit_type, entry_date, exit_date
+            FROM participant_program p
     ''', conn)
     return df
 
-def filter_participants(df, program_id=None,
+def filter_participants(df, provider_id=None,
+                        program_code=None,
                         min_entry_date=None,
                         max_entry_date=None,
                         min_exit_date=None,
                         max_exit_date=None,
-                        exit_type_id=None,
-                        enrolled=None):
-    if program_id is not None:
-        df = df[df.programid==program_id]
+                        exit_type=None):
+    if provider_id is not None:
+        df = df[df.provider_id==provider_id]
+    if program_code is not None:
+        df = df[df.program_code==program_code]
     if min_entry_date is not None:
         entry_date = pd.to_datetime(min_entry_date)
-        df = df[df.entrydate >= min_entry_date]
+        df = df[df.entry_date >= min_entry_date]
     if min_exit_date is not None:
         exit_date = pd.to_datetime(min_exit_date)
-        df = df[df.exitdate >= min_exit_date]
+        df = df[df.exit_date >= min_exit_date]
     if max_entry_date is not None:
         entry_date = pd.to_datetime(max_entry_date)
-        df = df[df.entrydate <= max_entry_date]
+        df = df[df.entry_date <= max_entry_date]
     if max_exit_date is not None:
         exit_date = pd.to_datetime(max_exit_date)
-        df = df[df.exitdate <= max_exit_date]
-    if exit_type_id is not None:
-        df = df[df.exittypeid == exit_type_id]
-    if enrolled is not None:
-        df = df[df.enrolled == enrolled]
+        df = df[df.exit_date <= max_exit_date]
+    if exit_type is not None:
+        df = df[df.exit_type == exit_type]
 
-    retval = df.participantid.unique()
+    retval = df.participant_id.unique()
     return retval

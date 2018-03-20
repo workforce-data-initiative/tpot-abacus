@@ -5,6 +5,8 @@ import numpy as np
 from abacus_tpot import tpot_config
 
 def get_wages(ids):
+    if len(ids) == 0:
+        return None
     conn = psycopg2.connect(tpot_config.WAGE_RECORD_URI)
     df = pd.read_sql('''
         SELECT id, year, q1_wage, q2_wage, q3_wage, q4_wage
@@ -25,6 +27,8 @@ def get_wage_table(ids):
     """
     Return a table of wage data based on the transactional DB
     """
+    if len(ids) == 0:
+        return None
     wages = get_wages(ids)
     conn = psycopg2.connect(tpot_config.WAREHOUSE_URI)
     df = pd.read_sql('''

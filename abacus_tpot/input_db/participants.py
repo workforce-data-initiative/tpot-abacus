@@ -11,7 +11,7 @@ def get_participant_table():
     conn = psycopg2.connect(tpot_config.WAREHOUSE_URI)
     df = pd.read_sql('''
         SELECT participant_id, program_code, provider_id, exit_type, entry_date, exit_date
-            FROM participant_program p
+            FROM program_participant
     ''', conn)
     return df
 

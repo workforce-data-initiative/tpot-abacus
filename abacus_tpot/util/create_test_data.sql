@@ -31,15 +31,15 @@ INSERT INTO provider VALUES
     (2, 'Fake Coding Bootcamp', 'Fake coding bootcamp', 'info@fakebc.com', 'http://fakebc.com', 2010);
 
 INSERT INTO program_participant VALUES
-    (1, 123456789, 1, 1, '1/1/2014', '12/31/2014', 'graduated', TRUE, 'associate degree', 'WIOA', 'Nursing', 'Denver'),
-    (2, 223456789, 1, 1, '1/1/2014', '12/31/2014', 'dropped out', FALSE, 'associate degree', 'WIOA', 'Nursing', 'Denver'),
-    (3, 323456789, 1, 2, '1/1/2014', '12/31/2014', 'graduated', TRUE, 'badge', NULL, 'Java', NULL),
-    (4, 423456789, 1, 1, '1/1/2014', '12/31/2014', 'graduated', TRUE, 'associate degree', 'WIOA', 'Nursing', 'Denver'),
-    (5, 523456789, 1, 1, '1/1/2014', '12/31/2014', 'graduated', TRUE, 'associate degree', 'WIOA', 'Nursing', 'Denver'),
-    (6, 623456789, 1, 1, '1/1/2014', '12/31/2014', 'graduated', TRUE, 'associate degree', 'WIOA', 'Nursing', 'Denver'),
-    (7, 723456789, 1, 1, '1/1/2014', '12/31/2014', 'graduated', TRUE, 'associate degree', 'WIOA', 'Nursing', 'Denver'),
-    (8, 823456789, 1, 1, '1/1/2014', '12/31/2014', 'graduated', TRUE, 'associate degree', 'WIOA', 'Nursing', 'Denver'),
-    (9, 923456789, 1, 1, '1/1/2014', '12/31/2014', 'graduated', TRUE, 'associate degree', 'WIOA', 'Nursing', 'Denver'),
-    (10, 023456789, 1, 1, '1/1/2014', '12/31/2014', 'graduated', TRUE, 'associate degree', 'WIOA', 'Nursing', 'Denver'),
-    (11, 013456789, 1, 1, '1/1/2014', '12/31/2014', 'graduated', TRUE, 'associate degree', 'WIOA', 'Nursing', 'Denver');
+    (1, 123456789, 1, 1, '1/1/2014', '12/31/2014', 'Graduated', TRUE, 'Associate Degree', 'WIOA', 'Nursing', 'Denver'),
+    (2, 223456789, 1, 1, '1/1/2014', '12/31/2014', 'Withdrew', FALSE, 'Associate Degree', 'WIOA', 'Nursing', 'Denver'),
+    (3, 323456789, 1, 2, '1/1/2014', '12/31/2014', 'Graduated', TRUE, 'Badge', NULL, 'Java', NULL),
+    (4, 423456789, 1, 1, '1/1/2014', '12/31/2014', 'Graduated', TRUE, 'Associate Degree', 'WIOA', 'Nursing', 'Denver'),
+    (5, 523456789, 1, 1, '1/1/2014', '12/31/2014', 'Graduated', TRUE, 'Associate Degree', 'WIOA', 'Nursing', 'Denver'),
+    (6, 623456789, 1, 1, '1/1/2014', '12/31/2014', 'Graduated', TRUE, 'Associate Degree', 'WIOA', 'Nursing', 'Denver'),
+    (7, 723456789, 1, 1, '1/1/2014', '12/31/2014', 'Graduated', TRUE, 'Associate Degree', 'WIOA', 'Nursing', 'Denver'),
+    (8, 823456789, 1, 1, '1/1/2014', '12/31/2014', 'Graduated', TRUE, 'Associate Degree', 'WIOA', 'Nursing', 'Denver'),
+    (9, 923456789, 1, 1, '1/1/2014', '12/31/2014', 'Graduated', TRUE, 'Associate Degree', 'WIOA', 'Nursing', 'Denver'),
+    (10, 023456789, 1, 1, '1/1/2014', '12/31/2014', 'Graduated', TRUE, 'Associate Degree', 'WIOA', 'Nursing', 'Denver'),
+    (11, 013456789, 1, 1, '1/1/2014', '12/31/2014', 'Graduated', TRUE, 'Associate Degree', 'WIOA', 'Nursing', 'Denver');
 

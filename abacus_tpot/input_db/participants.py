@@ -30,16 +30,16 @@ def filter_participants(df, provider_id=None,
     if program_code is not None:
         df = df[df.program_code==program_code]
     if min_entry_date is not None:
-        entry_date = pd.to_datetime(min_entry_date)
+        min_entry_date = pd.to_datetime(min_entry_date).date()
         df = df[df.entry_date >= min_entry_date]
     if min_exit_date is not None:
-        exit_date = pd.to_datetime(min_exit_date)
+        min_exit_date = pd.to_datetime(min_exit_date).date()
         df = df[df.exit_date >= min_exit_date]
     if max_entry_date is not None:
-        entry_date = pd.to_datetime(max_entry_date)
+        max_entry_date = pd.to_datetime(max_entry_date).date()
         df = df[df.entry_date <= max_entry_date]
     if max_exit_date is not None:
-        exit_date = pd.to_datetime(max_exit_date)
+        max_exit_date = pd.to_datetime(max_exit_date).date()
         df = df[df.exit_date <= max_exit_date]
     if exit_type is not None:
         df = df[df.exit_type == exit_type]

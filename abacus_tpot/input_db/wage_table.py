@@ -32,9 +32,10 @@ def get_wage_table(ids):
     wages = get_wages(ids)
     conn = psycopg2.connect(tpot_config.WAREHOUSE_URI)
     df = pd.read_sql('''
-        SELECT participant_id, program_code, provider_id, 
-               exit_type, exit_date, entry_date
-            FROM program_participant WHERE participant_id IN %s
+        SELECT p.participant_id, o.program_code, p.provider_id, 
+               p.program_id, p.exit_type, p.exit_date, p.entry_date
+            FROM program_participant p JOIN program o ON p.program_id=o.id
+            WHERE participant_id IN %s
     ''', conn, params=(tuple(ids),))
     retval = pd.merge(wages, df, how='left', left_on='id', right_on='participant_id')
     return retval

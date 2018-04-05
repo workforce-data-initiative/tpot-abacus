@@ -2,10 +2,8 @@ version: 2
 
 jobs:
   build:
-    working_directory: ~/abacus_tpot
     docker:
       - image: circleci/python:3.6
-
     steps:
       - checkout
       - restore_cache:
@@ -22,7 +20,6 @@ jobs:
       - run:
           name: Running tests
           command: |
-            echo Running tests
             . venv/bin/activate
             coverage run setup.py test
             coverage report -m
@@ -35,16 +32,20 @@ jobs:
           command: |
             . venv/bin/activate
             python setup.py verify
+
+  deploy:
+    docker:
+      - image: circleci/python:3.6
+    steps:
       - run:
           name: Upload to testpypi or pypi
           command: |
-            . venv/bin/activate
             if [ $CIRCLE_BRANCH = 'master' ]; then sh pypi.sh; fi
             if [ $CIRCLE_BRANCH = 'develop' ]; then sh test_pypi.sh; fi
 
 workflows:
   version: 2
-  build-n-deploy:
+  build-test-n-deploy:
     jobs:
       - build:
           filters:
@@ -55,6 +56,6 @@ workflows:
             - build
           filters:
             tags:
-              only: /^v.*/
+              only: /.*/
             branches:
-              ignore: /.*/
+              only: /(master|develop)/

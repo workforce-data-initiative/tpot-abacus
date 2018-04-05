@@ -20,7 +20,9 @@ pip install abacus-tpot
 
 This project has a `.editorconfig` file to help contributors define and maintain consistent coding styles between different editors and IDEs.
 
-We are using CircleCI version 2, for more on this read this: https://circleci.com/beta-access/
+We are using CircleCI for continuous integration.
+
+Found a bug or want to propose something to the team? Create a new issue if it is not listed [here](https://github.com/workforce-data-initiative/tpot-abacus/issues). Even better, feel free to fork this repo, make the changes and raise a PR. We'll be more than happy to review it.
 
 ### Testing
 
@@ -28,3 +30,7 @@ Run:
 ```bash
 python setup.py test
 ```
+
+### Docs
+
+Going through [this jupyter notebook](https://github.com/workforce-data-initiative/tpot-abacus/blob/develop/abacus.ipynb) will give you a sense of what the abacus packs in.

@@ -5,7 +5,6 @@ jobs:
     working_directory: ~/abacus_tpot
     docker:
       - image: circleci/python:3.6
-
     steps:
       - checkout
       - restore_cache:
@@ -19,6 +18,10 @@ jobs:
           key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}
           paths:
             - "venv"
+  test:
+    docker:
+      - image: circleci/python:3.6
+    steps:
       - run:
           name: Running tests
           command: |
@@ -35,6 +38,11 @@ jobs:
           command: |
             . venv/bin/activate
             python setup.py verify
+
+  deploy:
+    docker:
+      - image: circleci/python:3.6
+    steps:
       - run:
           name: Upload to testpypi or pypi
           command: |
@@ -44,17 +52,15 @@ jobs:
 
 workflows:
   version: 2
-  build-n-deploy:
+  build-test-n-deploy:
     jobs:
-      - build:
-          filters:
-            tags:
-              only: /.*/
-      - deploy:
+      - build
+      - test:
           requires:
             - build
+      - deploy:
+          requires:
+            - test
           filters:
-            tags:
-              only: /^v.*/
             branches:
-              ignore: /.*/
+              only: /(master|develop)/

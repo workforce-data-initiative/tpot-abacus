@@ -37,6 +37,18 @@ Run:
 
     python setup.py test
 
+Deployment
+~~~~~~~~~~
+
+Automatic Uploading to ``testpypi`` and ``pypi`` has been set in the CI
+and only develop and master branches are deployed to the package
+repositories respectively.
+
+Ready to deploy? Update the version in ``setup.py`` and create a new git
+tag with ``git tag $VERSION``. Once you push the tag to GitHub with
+``git push --tags`` a new CircleCI build is triggered. Once the versions
+are confirmed, booyah, you have a new version uploaded.
+
 Docs
 ~~~~
 

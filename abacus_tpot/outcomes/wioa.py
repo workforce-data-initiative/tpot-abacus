@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from abacus_tpot import tpot_config
 
+
 def median_wage_n_quarters_after_exit(wage_table, participants,
                                       n_quarters):
     """
@@ -27,7 +28,7 @@ def median_wage_n_quarters_after_exit(wage_table, participants,
 
 
 def mean_wage_n_quarters_after_exit(wage_table, participants,
-                                      n_quarters):
+                                    n_quarters):
     """
     Return the median total wage for the Nth quarter after the
     program exit date, for a list of participants.
@@ -51,7 +52,7 @@ def mean_wage_n_quarters_after_exit(wage_table, participants,
 
 
 def employed_n_quarters_after_exit(wage_table, participants,
-                                     n_quarters):
+                                   n_quarters):
     """
     Return the percent employed for the Nth quarter after the
     program exit date, for a list of participants.
@@ -103,5 +104,5 @@ def obtained_credentials(participant_table, participants):
     Return the total number of credential obtainers in a participant list
     """
     participant_table = participant_table[participant_table.participant_id.isin(participants)]
-    return participant_table[participant_table.obtained_credentials==True].\
+    return participant_table[participant_table.obtained_credentials is True].\
         participant_id.unique().shape[0]

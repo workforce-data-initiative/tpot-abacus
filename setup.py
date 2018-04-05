@@ -8,7 +8,7 @@ def read(fname):
 
 setup(name='abacus-tpot',
       packages=['abacus_tpot'],
-      version='0.5',
+      version='0.9',
       description="TPOT's analysis library",
       long_description=read('README.rst'),
       keywords=['analysis', 'data', 'tpot', 'library'],

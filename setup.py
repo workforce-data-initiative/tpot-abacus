@@ -8,13 +8,13 @@ def read(fname):
 
 setup(name='abacus-tpot',
       packages=['abacus_tpot'],
-      version='0.11',
+      version='0.5',
       description="TPOT's analysis library",
       long_description=read('README.rst'),
       keywords=['analysis', 'data', 'tpot', 'library'],
       url='https://github.com/workforce-data-initiative/abacus-tpot',
-      download_url='https://github.com/workforce-data-initiative/abacus-tpot/archive/0.6.tar.gz',
-      author='Stanley Ndagi',
-      author_email='stanley@brighthive.io',
+      download_url='https://github.com/workforce-data-initiative/abacus-tpot/archive/0.9.tar.gz',
+      author='Stanley Ndagi, Tom Plagge',
+      author_email='stanley@brighthive.io, tom@brighthive.io',
       license='Apache 2.0',
       zip_safe=True)

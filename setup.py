@@ -5,7 +5,7 @@ from setuptools import setup
 from setuptools.command.install import install
 
 
-VERSION = "0.91"
+VERSION = "0.92"
 TAG = os.getenv('CIRCLE_TAG')
 
 

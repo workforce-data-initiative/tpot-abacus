@@ -30,7 +30,7 @@ jobs:
       - run:
           name: verify git tag vs. package version in setup.py
           command: |
-            . venv/bin/activate
+            export CIRCLE_TAG=$(git describe $(git rev-list --tags --max-count=1))
             python setup.py verify
 
   deploy:
@@ -40,6 +40,7 @@ jobs:
       - run:
           name: Upload to testpypi or pypi
           command: |
+            if [ $CIRCLE_TAG ]; then echo "The package is ready for deployment. Just merge to eiher develop or master branches to do so."; fi
             if [ $CIRCLE_BRANCH = 'master' ]; then sh pypi.sh; fi
             if [ $CIRCLE_BRANCH = 'develop' ]; then sh test_pypi.sh; fi
 

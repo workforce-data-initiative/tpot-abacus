@@ -1,0 +1,7 @@
+coverage==4.5.1
+jupyter==1.0.0
+numpy>=1.12.0
+pandas>=0.19.2
+psycopg2-binary>=2.6.2
+python-coveralls==2.9.1
+twine==1.11.0

@@ -5,7 +5,7 @@ Analysis Library
 [![Python 3](https://pyup.io/repos/github/workforce-data-initiative/tpot-abacus/python-3-shield.svg)](https://pyup.io/repos/github/workforce-data-initiative/tpot-abacus/)
 [![Updates](https://pyup.io/repos/github/workforce-data-initiative/tpot-abacus/shield.svg)](https://pyup.io/repos/github/workforce-data-initiative/tpot-abacus/)
 [![CircleCI](https://circleci.com/gh/workforce-data-initiative/tpot-abacus.svg?style=svg)](https://circleci.com/gh/workforce-data-initiative/tpot-abacus)
-[![Coverage Status](https://coveralls.io/repos/github/workforce-data-initiative/abacus-tpot/badge.svg)](https://coveralls.io/github/workforce-data-initiative/tpot-abacus)
+[![Coverage Status](https://coveralls.io/repos/github/workforce-data-initiative/tpot-abacus/badge.svg?branch=develop)](https://coveralls.io/github/workforce-data-initiative/tpot-abacus?branch=develop)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c5a146f4dd1f46bf2eaa/maintainability)](https://codeclimate.com/github/workforce-data-initiative/abacus-tpot/maintainability)
 
 ### Installation
@@ -35,7 +35,7 @@ python setup.py test
 
 Automatic Uploading to `testpypi` and `pypi` has been set in the CI and only develop and master branches are deployed to the package repositories respectively.
 
-Ready to deploy? Update the version in `setup.py` and create a new git tag with `git tag $VERSION`. Once you push the tag to GitHub with `git push --tags` a new CircleCI build is triggered. Once the versions are confirmed, booyah, you have a new version uploaded.
+Ready to deploy? Update the version in `setup.py` and create a new git tag with `git tag $VERSION`. Push the tag to GitHub with `git push --tags`, a new CircleCI build is triggered and will only confirm that the package is ready for uploading. The upload will only happen when `master` or `develop` are pushed and successfully build.
 
 ### Docs
 

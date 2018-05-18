@@ -102,3 +102,6 @@ ENV/
 
 #VSCODE
 .vscode
+
+# Build files
+_build/*
